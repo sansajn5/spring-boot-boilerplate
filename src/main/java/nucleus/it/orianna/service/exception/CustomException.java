@@ -1,7 +1,7 @@
 package nucleus.it.orianna.service.exception;
 
 
-import nucleus.it.orianna.helper.ResourceBundleUtil;
+import nucleus.it.orianna.util.ResourceBundleUtil;
 
 import java.util.Locale;
 

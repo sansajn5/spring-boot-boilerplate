@@ -1,4 +1,4 @@
-package nucleus.it.orianna.helper;
+package nucleus.it.orianna.util;
 
 import org.springframework.stereotype.Component;
 

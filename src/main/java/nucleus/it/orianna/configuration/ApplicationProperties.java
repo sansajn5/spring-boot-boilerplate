@@ -18,6 +18,11 @@ public class ApplicationProperties {
      */
     public final Swagger swagger = new Swagger();
 
+    /**
+     * Security configuration
+     */
+    public final Security security = new Security();
+
     public static class Swagger {
         
         private String title;
@@ -111,11 +116,36 @@ public class ApplicationProperties {
             this.host = host;
         }
     }
+
+    public static class Security  {
+
+        private String secret;
+        private Long expiration;
+
+        public String getSecret() {
+            return secret;
+        }
+
+        public void setSecret(String secret) {
+            this.secret = secret;
+        }
+
+        public Long getExpiration() {
+            return expiration;
+        }
+
+        public void setExpiration(Long expiration) {
+            this.expiration = expiration;
+        }
+    }
     
     /**
-     * GENERATED GET AND SET METHODS
+     * GENERATED GET METHODS
      */
     public Swagger getSwagger() {
         return swagger;
     }
+
+    public Security getSecurity() { return security; }
+
 }
