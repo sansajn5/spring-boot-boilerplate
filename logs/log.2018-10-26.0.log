@@ -2519,3 +2519,246 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'ori
 26-10-2018 14:08:33 - [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 26-10-2018 14:08:33 - [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 26-10-2018 14:08:33 - [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+26-10-2018 20:22:26 - [main] INFO  n.it.orianna.OriannaApplication - Starting OriannaApplication on sansajn with PID 6593 (/home/sansajn/Documents/nucleus-it/target/classes started by sansajn in /home/sansajn/Documents/nucleus-it)
+26-10-2018 20:22:26 - [main] INFO  n.it.orianna.OriannaApplication - The following profiles are active: dev
+26-10-2018 20:22:29 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$17fd66f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:22:29 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9a2d9ea9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:22:29 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:22:29 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6ef1a1b9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:22:29 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$bf02415b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:22:29 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:22:29 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$810023a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:22:30 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:22:30 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+26-10-2018 20:22:30 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+26-10-2018 20:22:30 - [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+26-10-2018 20:22:30 - [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+26-10-2018 20:22:30 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+26-10-2018 20:22:31 - [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Could not connect to address=(host=localhost)(port=3306)(type=master) : Connection refused (Connection refused)
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:175)
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.connException(ExceptionMapper.java:83)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1117)
+	at org.mariadb.jdbc.internal.util.Utils.retrieveProxy(Utils.java:503)
+	at org.mariadb.jdbc.MariaDbConnection.newConnection(MariaDbConnection.java:155)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:86)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:56)
+	at org.flywaydb.core.internal.database.DatabaseFactory.createDatabase(DatabaseFactory.java:72)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1655)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1341)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1087)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
+	at nucleus.it.orianna.OriannaApplication.main(OriannaApplication.java:12)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connect(AbstractConnectProtocol.java:445)
+	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1109)
+	... 36 common frames omitted
+26-10-2018 20:22:31 - [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+26-10-2018 20:24:09 - [main] INFO  n.it.orianna.OriannaApplication - Starting OriannaApplication on sansajn with PID 7304 (/home/sansajn/Documents/nucleus-it/target/classes started by sansajn in /home/sansajn/Documents/nucleus-it)
+26-10-2018 20:24:09 - [main] INFO  n.it.orianna.OriannaApplication - The following profiles are active: dev
+26-10-2018 20:24:12 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$58d1f3b0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:24:12 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$f17fbbea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:24:12 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:24:12 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@285f38f6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:24:12 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$16545e9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:24:12 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:24:12 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$d85240e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:24:12 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:24:12 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+26-10-2018 20:24:12 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+26-10-2018 20:24:12 - [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+26-10-2018 20:24:13 - [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+26-10-2018 20:24:13 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+26-10-2018 20:24:13 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+26-10-2018 20:24:13 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:24:14 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:24:14 - [main] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+26-10-2018 20:24:16 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+26-10-2018 20:24:16 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/app/**/*.{js,html}'], []
+26-10-2018 20:24:16 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/i18n/**'], []
+26-10-2018 20:24:16 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/content/**'], []
+26-10-2018 20:24:16 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+26-10-2018 20:24:16 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/test/**'], []
+26-10-2018 20:24:16 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+26-10-2018 20:24:16 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b1ff8cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@5af38a4a, org.springframework.security.web.header.HeaderWriterFilter@7bce9ce4, org.springframework.security.web.authentication.logout.LogoutFilter@3568ea59, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ca0b9b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53e28097, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cee903a, org.springframework.security.web.session.SessionManagementFilter@248d3a, org.springframework.security.web.access.ExceptionTranslationFilter@59f7c106, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@137a4b54]
+26-10-2018 20:24:17 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+26-10-2018 20:24:17 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+26-10-2018 20:24:17 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+26-10-2018 20:24:17 - [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+26-10-2018 20:24:17 - [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+26-10-2018 20:24:17 - [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+26-10-2018 20:24:17 - [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+26-10-2018 20:24:17 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:24:17 - [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+26-10-2018 20:24:18 - [main] INFO  n.it.orianna.OriannaApplication - Started OriannaApplication in 9.122 seconds (JVM running for 9.777)
+26-10-2018 20:26:24 - [http-nio-8085-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+26-10-2018 20:26:25 - [http-nio-8085-exec-2] INFO  n.i.o.web.rest.auth.AuthResource - POST /api/auth/sign-up - nucleus.it.orianna.web.rest.user.dto.request.SignUpRequestDTO@70026718
+26-10-2018 20:26:58 - [http-nio-8085-exec-3] INFO  n.i.o.web.rest.auth.AuthResource - POST /api/auth/sign-up - nucleus.it.orianna.web.rest.user.dto.request.SignUpRequestDTO@225adde3
+26-10-2018 20:26:58 - [http-nio-8085-exec-3] ERROR n.i.o.w.r.e.RestExceptionHandler - Handling error - nucleus.it.orianna.web.rest.exception.ExceptionResponse@68d7c91d
+26-10-2018 20:30:36 - [Thread-3] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+26-10-2018 20:30:36 - [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+26-10-2018 20:30:36 - [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+26-10-2018 20:30:36 - [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:30:36 - [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+26-10-2018 20:30:36 - [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+26-10-2018 20:30:42 - [main] INFO  n.it.orianna.OriannaApplication - Starting OriannaApplication on sansajn with PID 9840 (/home/sansajn/Documents/nucleus-it/target/classes started by sansajn in /home/sansajn/Documents/nucleus-it)
+26-10-2018 20:30:42 - [main] INFO  n.it.orianna.OriannaApplication - The following profiles are active: dev
+26-10-2018 20:30:44 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b6241bf5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:30:44 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$4ed1e42f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:30:44 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:30:44 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3baf6936' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:30:44 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$73a686e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:30:44 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:30:44 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$35a46927] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:30:45 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:30:45 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+26-10-2018 20:30:45 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+26-10-2018 20:30:45 - [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+26-10-2018 20:30:45 - [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+26-10-2018 20:30:45 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+26-10-2018 20:30:45 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+26-10-2018 20:30:46 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:30:46 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:30:47 - [main] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+26-10-2018 20:30:48 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+26-10-2018 20:30:48 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/app/**/*.{js,html}'], []
+26-10-2018 20:30:48 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/i18n/**'], []
+26-10-2018 20:30:48 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/content/**'], []
+26-10-2018 20:30:48 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+26-10-2018 20:30:48 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/test/**'], []
+26-10-2018 20:30:48 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+26-10-2018 20:30:48 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47162173, org.springframework.security.web.context.SecurityContextPersistenceFilter@53e28097, org.springframework.security.web.header.HeaderWriterFilter@fd87c22, org.springframework.security.web.authentication.logout.LogoutFilter@25d0b918, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75f4d8a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@797f97e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a4f8e8a, org.springframework.security.web.session.SessionManagementFilter@7878bbdb, org.springframework.security.web.access.ExceptionTranslationFilter@500ec769, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6cee903a]
+26-10-2018 20:30:49 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+26-10-2018 20:30:49 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+26-10-2018 20:30:49 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+26-10-2018 20:30:49 - [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+26-10-2018 20:30:49 - [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+26-10-2018 20:30:49 - [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+26-10-2018 20:30:49 - [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+26-10-2018 20:30:49 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:30:49 - [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+26-10-2018 20:30:49 - [main] INFO  n.it.orianna.OriannaApplication - Started OriannaApplication in 8.937 seconds (JVM running for 9.719)
+26-10-2018 20:32:05 - [http-nio-8085-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+26-10-2018 20:32:05 - [http-nio-8085-exec-2] INFO  n.i.o.web.rest.auth.AuthResource - POST /api/auth/sign-up - nucleus.it.orianna.web.rest.user.dto.request.SignUpRequestDTO@6917588b
+26-10-2018 20:32:30 - [Thread-3] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+26-10-2018 20:32:30 - [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+26-10-2018 20:32:30 - [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+26-10-2018 20:32:30 - [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:32:30 - [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+26-10-2018 20:32:30 - [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+26-10-2018 20:32:34 - [main] INFO  n.it.orianna.OriannaApplication - Starting OriannaApplication on sansajn with PID 10319 (/home/sansajn/Documents/nucleus-it/target/classes started by sansajn in /home/sansajn/Documents/nucleus-it)
+26-10-2018 20:32:34 - [main] INFO  n.it.orianna.OriannaApplication - The following profiles are active: dev
+26-10-2018 20:32:37 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$17fd66f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:32:37 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9a2d9ea9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:32:37 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:32:37 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5fbdc49b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:32:37 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$bf02415b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:32:37 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:32:37 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$810023a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:32:37 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:32:37 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+26-10-2018 20:32:37 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+26-10-2018 20:32:37 - [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+26-10-2018 20:32:38 - [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+26-10-2018 20:32:38 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+26-10-2018 20:32:38 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+26-10-2018 20:32:39 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:32:40 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:32:40 - [main] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+26-10-2018 20:32:42 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+26-10-2018 20:32:42 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/app/**/*.{js,html}'], []
+26-10-2018 20:32:42 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/i18n/**'], []
+26-10-2018 20:32:42 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/content/**'], []
+26-10-2018 20:32:42 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+26-10-2018 20:32:42 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/test/**'], []
+26-10-2018 20:32:42 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+26-10-2018 20:32:42 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40538370, org.springframework.security.web.context.SecurityContextPersistenceFilter@5dd747c1, org.springframework.security.web.header.HeaderWriterFilter@1c011855, org.springframework.security.web.authentication.logout.LogoutFilter@7878bbdb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7aa3857b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fee881, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71a2df1, org.springframework.security.web.session.SessionManagementFilter@3caf5c96, org.springframework.security.web.access.ExceptionTranslationFilter@bc8d68b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38667005]
+26-10-2018 20:32:44 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+26-10-2018 20:32:44 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+26-10-2018 20:32:44 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+26-10-2018 20:32:44 - [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+26-10-2018 20:32:44 - [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+26-10-2018 20:32:44 - [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+26-10-2018 20:32:44 - [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+26-10-2018 20:32:45 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:32:45 - [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+26-10-2018 20:32:45 - [main] INFO  n.it.orianna.OriannaApplication - Started OriannaApplication in 11.53 seconds (JVM running for 12.429)
+26-10-2018 20:32:48 - [http-nio-8085-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+26-10-2018 20:32:48 - [http-nio-8085-exec-2] INFO  n.i.o.web.rest.auth.AuthResource - POST /api/auth/sign-up - nucleus.it.orianna.web.rest.user.dto.request.SignUpRequestDTO@207673b8
+26-10-2018 20:33:13 - [Thread-3] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+26-10-2018 20:33:13 - [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+26-10-2018 20:33:13 - [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+26-10-2018 20:33:13 - [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:33:13 - [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+26-10-2018 20:33:13 - [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+26-10-2018 20:33:17 - [main] INFO  n.it.orianna.OriannaApplication - Starting OriannaApplication on sansajn with PID 10730 (/home/sansajn/Documents/nucleus-it/target/classes started by sansajn in /home/sansajn/Documents/nucleus-it)
+26-10-2018 20:33:17 - [main] INFO  n.it.orianna.OriannaApplication - The following profiles are active: dev
+26-10-2018 20:33:20 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a3aeec8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:33:20 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a2e8b702] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:33:20 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:33:20 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@51b35e4e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:33:20 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$c7bd59b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:33:20 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:33:20 - [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$89bb3bfa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+26-10-2018 20:33:20 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:33:20 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+26-10-2018 20:33:20 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.34
+26-10-2018 20:33:20 - [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+26-10-2018 20:33:21 - [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+26-10-2018 20:33:21 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+26-10-2018 20:33:21 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+26-10-2018 20:33:21 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:33:22 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+26-10-2018 20:33:23 - [main] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+26-10-2018 20:33:24 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+26-10-2018 20:33:24 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/app/**/*.{js,html}'], []
+26-10-2018 20:33:24 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/i18n/**'], []
+26-10-2018 20:33:24 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/content/**'], []
+26-10-2018 20:33:24 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+26-10-2018 20:33:24 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/test/**'], []
+26-10-2018 20:33:24 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/webjars/**'], []
+26-10-2018 20:33:24 - [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cee903a, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e1a9173, org.springframework.security.web.header.HeaderWriterFilter@1d2046bb, org.springframework.security.web.authentication.logout.LogoutFilter@9f2376f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d800a56, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e794f53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@780ee3ad, org.springframework.security.web.session.SessionManagementFilter@3c71cf3e, org.springframework.security.web.access.ExceptionTranslationFilter@1bdafb01, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c9372ed]
+26-10-2018 20:33:25 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+26-10-2018 20:33:25 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+26-10-2018 20:33:25 - [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+26-10-2018 20:33:25 - [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+26-10-2018 20:33:25 - [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+26-10-2018 20:33:25 - [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+26-10-2018 20:33:25 - [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+26-10-2018 20:33:26 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8085"]
+26-10-2018 20:33:26 - [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+26-10-2018 20:33:26 - [main] INFO  n.it.orianna.OriannaApplication - Started OriannaApplication in 9.475 seconds (JVM running for 10.301)
+26-10-2018 20:33:32 - [http-nio-8085-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+26-10-2018 20:33:32 - [http-nio-8085-exec-2] INFO  n.i.o.web.rest.auth.AuthResource - POST /api/auth/sign-up - nucleus.it.orianna.web.rest.user.dto.request.SignUpRequestDTO@6375c92a

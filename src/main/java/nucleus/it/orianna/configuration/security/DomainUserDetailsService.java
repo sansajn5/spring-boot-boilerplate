@@ -45,8 +45,8 @@ public class DomainUserDetailsService implements UserDetailsService {
     }
 
     private org.springframework.security.core.userdetails.User createSpringSecurityUser(User user)  {
-        if (!user.isActive())
-            throw new UserNotActivated(user.getEmail());
+//        if (!user.isActive())
+//            throw new UserNotActivated(user.getEmail());
 
         List<GrantedAuthority> grantedAuthorities = user.getAuthorities().stream()
                 .map(authority -> new SimpleGrantedAuthority(authority.getName()))

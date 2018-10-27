@@ -1,6 +1,7 @@
 package nucleus.it.orianna.util;
 
 import nucleus.it.orianna.configuration.ApplicationProperties;
+import nucleus.it.orianna.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -103,12 +104,12 @@ public class TokenProvider {
 
     /**
      * This method generates token and returns string that represents token for user
-     * @param userDetails
+     * @param user
      * @return token
      */
-    public String generateToken(UserDetails userDetails) {
+    public String generateToken(User user) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("sub", userDetails.getUsername());
+        claims.put("sub", user.getEmail());
         return Jwts.builder().setClaims(claims)
                 .setExpiration(new Date(System.currentTimeMillis() + expiration * 1000))
                 .signWith(SignatureAlgorithm.HS512, secret).compact();
