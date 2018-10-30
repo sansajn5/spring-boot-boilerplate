@@ -52,5 +52,6 @@ git commit -m 'comment'
 git push origin feature/crud-organization
 
 create merge request on gitlab.com and set your task on 'waiting for review'
+```
 
 ### Author sansajn5
