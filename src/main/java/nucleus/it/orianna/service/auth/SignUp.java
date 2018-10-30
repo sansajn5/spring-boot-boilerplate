@@ -22,6 +22,11 @@ public class SignUp {
         this.createUser = createUser;
     }
 
+    /**
+     * Method creating new user
+     * @param signUpData
+     * @throws UsernameExists
+     */
     public void signUp(SignUpData signUpData) throws UsernameExists {
         checkUserExistsByEmail(signUpData.getEmail());
 
@@ -31,8 +36,14 @@ public class SignUp {
                 signUpData.getEmail(),
                 signUpData.getPassword())
         );
+        //TODO Expand with mail service
     }
 
+    /**
+     * Checking for user existence
+     * @param email
+     * @throws UsernameExists
+     */
     private void checkUserExistsByEmail(String email) throws UsernameExists {
         if (userRepository.findUserByEmail(email).isPresent()) {
             throw new UsernameExists();

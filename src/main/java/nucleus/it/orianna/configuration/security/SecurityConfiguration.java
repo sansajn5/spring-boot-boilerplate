@@ -83,6 +83,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return authenticationTokenFilter;
     }
 
+    /**
+     * Method defining how to process with http requests
+     *
+     * @param http
+     * @throws Exception
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.sessionManagement()

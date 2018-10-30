@@ -1,5 +1,9 @@
 package nucleus.it.orianna.configuration.security;
 
+/**
+ * Const values for authorization procces
+ * @author sansajn
+ */
 public class AuthoritiesConstants {
 
     public static final String SUPER_ADMIN = "SUPER_ADMIN";

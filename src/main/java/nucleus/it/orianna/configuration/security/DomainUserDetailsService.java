@@ -35,6 +35,12 @@ public class DomainUserDetailsService implements UserDetailsService {
         this.userRepository = userRepository;
     }
 
+    /**
+     * This method loading domain user from databse if it exist
+     *
+     * @param email - Representing username/email (unique propertie)
+     * @return
+     */
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(final String email) {
@@ -44,9 +50,16 @@ public class DomainUserDetailsService implements UserDetailsService {
                         "database"));
     }
 
+    /**
+     * Method returing spring security user
+     *
+     * @param user - Database user
+     * @return
+     */
     private org.springframework.security.core.userdetails.User createSpringSecurityUser(User user)  {
-//        if (!user.isActive())
-//            throw new UserNotActivated(user.getEmail());
+        //TODO Uncomment when activation is implemented
+        //  if (!user.isActive())
+        //      throw new UserNotActivated(user.getEmail());
 
         List<GrantedAuthority> grantedAuthorities = user.getAuthorities().stream()
                 .map(authority -> new SimpleGrantedAuthority(authority.getName()))

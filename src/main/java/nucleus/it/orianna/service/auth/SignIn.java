@@ -24,6 +24,7 @@ public class SignIn {
 
     private final AuthenticationManager authenticationManager;
 
+
     @Autowired
     public SignIn(UserRepository userRepository, DomainUserDetailsService domainUserDetailsService, AuthenticationManager authenticationManager) {
         this.userRepository = userRepository;
@@ -31,6 +32,13 @@ public class SignIn {
         this.authenticationManager = authenticationManager;
     }
 
+    /**
+     * Method returning existing user from database
+     *
+     * @param signInData
+     * @return
+     * @throws UserNotFoundException
+     */
     public User signIn(SignInData signInData) throws UserNotFoundException {
         domainUserDetailsService.loadUserByUsername(signInData.getEmail());
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(

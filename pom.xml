@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>orianna</name>
-	<description>API for driving school</description>
+	<description>Boilerplate API</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

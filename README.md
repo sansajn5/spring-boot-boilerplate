@@ -1,5 +1,30 @@
 # Backend (Rest API) for Orianna
 
+### This is boilerplate spring API
+
+#### Structure
+**Structure has many package providing easy transformation to microservice archicutre**
+
+#### Contains
+
+```bash
+Security
+Flyway mirgation
+Logger
+Localization
+Sign in/up 
+Swagger
+Exception handler
+Email Service
+Mariadb/SQL connector
+```
+
+#### Upcoming 
+```bash
+AOP
+OAuth2
+Tests for each layer
+```
 
 ### IMPORTANT - Don't push anything to master branch ever, it will be merged with dev when its needed!
 
@@ -26,3 +51,5 @@ git commit -m 'comment'
 git push origin feature/crud-organization
 
 create merge request on gitlab.com and set your task on 'waiting for review'
+
+### Author sansajn5

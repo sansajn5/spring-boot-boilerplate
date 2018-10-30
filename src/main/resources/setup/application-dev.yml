@@ -16,7 +16,7 @@ spring:
 application:
   swagger:
     title: Orianna API
-    description: API documentation for driving school application
+    description: Boilerplate API documentation
     version: 1.0.0
     terms-of-service-url:
     contact-name: Nemanja Mudrinic
