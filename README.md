@@ -2,7 +2,6 @@
 
 ### This is boilerplate spring API
 
-#### Structure
 **Structure has many package providing easy transformation to microservice archicutre**
 
 #### Contains
@@ -28,7 +27,7 @@ Tests for each layer
 
 ### IMPORTANT - Don't push anything to master branch ever, it will be merged with dev when its needed!
 
-#### How to setup use git flow?
+#### How to use git flow?
 
 **Following steps are assuming that you're using gitbash/terminal.**
 
