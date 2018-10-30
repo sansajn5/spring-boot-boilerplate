@@ -34,10 +34,12 @@ Tests for each layer
 ```bash
 # Start from develop branch
 git checkout develop
+
 # Create branch with
 case **feature** - if is representing a new feature in app feature/name-of-task-from-scrum
 case **improvement** - if is representing a improvement of existing feature improvement/name-of-task-from-scrum
 case **fix** - if is representing a bug fix/name-of-task-from-scrum
+
 # Steps in terminal/gitbash
 git fetch origin
 git pull origin develop

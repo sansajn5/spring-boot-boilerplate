@@ -1,5 +1,6 @@
 package nucleus.it.orianna.web.rest.user;
 
+import nucleus.it.orianna.configuration.security.AuthoritiesConstants;
 import nucleus.it.orianna.service.user.GetUsers;
 import nucleus.it.orianna.web.rest.helper.UserConvertor;
 import nucleus.it.orianna.web.rest.user.dto.response.UsersResponseDTO;
@@ -31,7 +32,7 @@ public class UserResource {
     }
 
     @GetMapping()
-    @PreAuthorize("hasAuthority('USER')")
+    @PreAuthorize(AuthoritiesConstants.AUTH_USER)
     public ResponseEntity<UsersResponseDTO> getUsers() {
         logger.info("GET /api/users");
         return new ResponseEntity<>(this.userConvertor.convertToUsersResponse(getUsers.getUsers()), HttpStatus.OK);
